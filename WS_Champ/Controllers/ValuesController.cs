@@ -23,9 +23,11 @@ namespace WS_Champ.Controllers
             return EasyConnection.GetRegionDataById(Region.SelectRegionCommand(), id);
         }
 
+
         // POST api/values
-        public void Post([FromBody] string value)
+        public string Post([FromBody] string value)
         {
+            return value;
         }
 
         // PUT api/values/5
