@@ -23,5 +23,19 @@ namespace WS_Champ.Models
         {
             return "SELECT * FROM region";
         }
+        public static string InsertRegionCommand() {
+            return "INSERT INTO region ([Название региона], [Столица], [Округ]) " +
+        "VALUES(@name, @capital, @district);";
+        }
+
+        public static string DeleteRegionCommand()
+        {
+            return "DELETE FROM region WHERE [Код] = @id";
+        }
+
+        public static string UpdateRegionCommand()
+        {
+            return "UPDATE region SET [Название региона] = @name WHERE [Код] = @id";
+        }
     }
 }

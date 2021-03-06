@@ -5,6 +5,8 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using WS_Champ.Models;
+using Newtonsoft.Json;
+
 namespace WS_Champ.Controllers
 {
     public class ValuesController : ApiController
@@ -25,9 +27,9 @@ namespace WS_Champ.Controllers
 
 
         // POST api/values
-        public string Post([FromBody] string value)
+        public void Post([FromBody] Region value)
         {
-            return value;
+            EasyConnection.AddRegion(value.name, value.capital, value.district);
         }
 
         // PUT api/values/5

@@ -25,7 +25,6 @@ namespace Forma
         public MainWindow()
         {
             InitializeComponent();
-
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -42,6 +41,12 @@ namespace Forma
             var rgList = new List<Region>();
             rgList = JsonConvert.DeserializeObject<List<Region>>(answer);
             DG.ItemsSource = rgList;
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            AddRegion arw = new AddRegion();
+            arw.Show();
         }
     }
 }

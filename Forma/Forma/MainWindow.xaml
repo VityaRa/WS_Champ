@@ -9,17 +9,19 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <Button Grid.Row="1" Click="Button_Click"></Button>
-        <DataGrid Name="DG" Grid.Row="0" ColumnWidth="*"></DataGrid>
-        <ScrollViewer Grid.Row="2">
-            <TextBlock Name="ANS" Grid.Row="2" FontSize="10" TextWrapping="Wrap"></TextBlock>
-            </ScrollViewer>
+        <Button Grid.Row="0" Grid.Column="1" Click="Button_Click_1"></Button>
+        <Button Grid.Row="1" Click="Button_Click" Grid.Column="0" Grid.ColumnSpan="2"></Button>
+        <DataGrid Name="DG" Grid.Row="0" Grid.Column="0" ColumnWidth="*"></DataGrid>
+        <ScrollViewer Grid.Row="2" Grid.ColumnSpan="2">
+            <TextBlock Name="ANS" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" FontSize="10" TextWrapping="Wrap"></TextBlock>
+        </ScrollViewer>
     </Grid>
     
 </Window>

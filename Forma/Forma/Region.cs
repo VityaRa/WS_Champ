@@ -20,9 +20,16 @@ namespace Forma
             this.district = district;
         }
 
+        public Region(string name, string capital, string district)
+        {
+            this.name = name;
+            this.capital = capital;
+            this.district = district;
+        }
+
         public static string SelectRegionCommand()
         {
-            return "SELECT * FROM region";
+            return "SELECT * FROM region";  
         }
     }
 }

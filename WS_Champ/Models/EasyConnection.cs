@@ -48,7 +48,43 @@ namespace WS_Champ.Models
             }
             return new Region();
         }
-
+        public static void AddRegion (string name, string capital, string district)
+        {
+            using (SqlConnection connection = new SqlConnection())
+            {
+                connection.ConnectionString = GetConnectionString();
+                connection.Open();
+                SqlCommand sqlCommand = new SqlCommand(Region.InsertRegionCommand(), connection);
+                sqlCommand.Parameters.AddWithValue("name", name);
+                sqlCommand.Parameters.AddWithValue("capital", capital);
+                sqlCommand.Parameters.AddWithValue("district", district);
+                sqlCommand.ExecuteNonQuery();
+            }
+            
+        }
+        public static void DeleteRegion (int id)
+        {
+            using (SqlConnection connection = new SqlConnection())
+            {
+                connection.ConnectionString = GetConnectionString();
+                connection.Open();
+                SqlCommand sqlCommand = new SqlCommand(Region.DeleteRegionCommand(), connection);
+                sqlCommand.Parameters.AddWithValue("id", id);
+                sqlCommand.ExecuteNonQuery();
+            }
+        }
+        public static void UpdateRegion(int id, string newName)
+        {
+            using (SqlConnection connection = new SqlConnection())
+            {
+                connection.ConnectionString = GetConnectionString();
+                connection.Open();
+                SqlCommand sqlCommand = new SqlCommand(Region.UpdateRegionCommand(), connection);
+                sqlCommand.Parameters.AddWithValue("id", id);
+                sqlCommand.Parameters.AddWithValue("name", newName);
+                sqlCommand.ExecuteNonQuery();
+            }
+        }
         static private string GetConnectionString()
         {
             return "Data Source=localhost\\SQLEXPRESS;Initial Catalog=lobanov;"
