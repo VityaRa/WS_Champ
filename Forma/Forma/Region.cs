@@ -31,5 +31,10 @@ namespace Forma
         {
             return "SELECT * FROM region";  
         }
+        public override string ToString()
+        {
+            return this.code + ". " + this.name + " | " + this.capital + " | " + this.district;
+        }
+
     }
 }

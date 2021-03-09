@@ -48,5 +48,18 @@ namespace Forma
             AddRegion arw = new AddRegion();
             arw.Show();
         }
+
+        private void DeleteBtn_Click(object sender, RoutedEventArgs e)
+        {
+            DeleteRegion drb = new DeleteRegion();
+            drb.Show();
+        }
+
+        private void DG_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            Region item = DG.SelectedItem as Region;
+            var urb = new UpdateRegion(item);
+            urb.Show();
+        }
     }
 }

@@ -28,7 +28,6 @@ namespace Forma
 
         private void Input_Click(object sender, RoutedEventArgs e)
         {
-            //Написать логику для чека пустоты
             Region rg = new Region(0, InName.Text, InCapital.Text, InDistrict.Text);
             WebClient wc = new WebClient();
             wc.Encoding = Encoding.UTF8;

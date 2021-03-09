@@ -36,3 +36,8 @@ C:\Users\Vityarka\Desktop\WS_Champ\Forma\Forma\obj\Debug\Forma.exe
 C:\Users\Vityarka\Desktop\WS_Champ\Forma\Forma\obj\Debug\Forma.pdb
 C:\Users\Vityarka\Desktop\WS_Champ\Forma\Forma\obj\Debug\AddRegion.g.cs
 C:\Users\Vityarka\Desktop\WS_Champ\Forma\Forma\obj\Debug\AddRegion.baml
+C:\Users\Vityarka\Desktop\WS_Champ\Forma\Forma\obj\Debug\DeleteRegion.g.cs
+C:\Users\Vityarka\Desktop\WS_Champ\Forma\Forma\obj\Debug\DeleteRegion.baml
+C:\Users\Vityarka\Desktop\WS_Champ\Forma\Forma\obj\Debug\UpdateRegion.g.cs
+C:\Users\Vityarka\Desktop\WS_Champ\Forma\Forma\obj\Debug\UpdateRegion.baml
+C:\Users\Vityarka\Desktop\WS_Champ\Forma\Forma\obj\Debug\GeneratedInternalTypeHelper.g.cs

@@ -35,7 +35,7 @@ namespace WS_Champ.Models
 
         public static string UpdateRegionCommand()
         {
-            return "UPDATE region SET [Название региона] = @name WHERE [Код] = @id";
+            return "UPDATE region SET [Название региона] = @name, [Столица] = @capital, [Округ] = @district WHERE [Код] = @id";
         }
     }
 }

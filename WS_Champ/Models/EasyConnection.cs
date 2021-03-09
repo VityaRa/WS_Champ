@@ -73,7 +73,7 @@ namespace WS_Champ.Models
                 sqlCommand.ExecuteNonQuery();
             }
         }
-        public static void UpdateRegion(int id, string newName)
+        public static void UpdateRegion(int id, Region newRegion)
         {
             using (SqlConnection connection = new SqlConnection())
             {
@@ -81,7 +81,9 @@ namespace WS_Champ.Models
                 connection.Open();
                 SqlCommand sqlCommand = new SqlCommand(Region.UpdateRegionCommand(), connection);
                 sqlCommand.Parameters.AddWithValue("id", id);
-                sqlCommand.Parameters.AddWithValue("name", newName);
+                sqlCommand.Parameters.AddWithValue("name", newRegion.name);
+                sqlCommand.Parameters.AddWithValue("capital", newRegion.capital);
+                sqlCommand.Parameters.AddWithValue("district", newRegion.district);
                 sqlCommand.ExecuteNonQuery();
             }
         }

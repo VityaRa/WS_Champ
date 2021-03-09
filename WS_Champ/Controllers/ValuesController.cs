@@ -33,13 +33,15 @@ namespace WS_Champ.Controllers
         }
 
         // PUT api/values/5
-        public void Put(int id, [FromBody] string value)
+        public void Put(int id, [FromBody] Region region)
         {
+            EasyConnection.UpdateRegion(id, region);
         }
 
         // DELETE api/values/5
         public void Delete(int id)
         {
+            EasyConnection.DeleteRegion(id);
         }
     }
 }
